@@ -68,27 +68,27 @@ class LoginController extends Controller
             } else if (auth()->user()->type == 'direktur') {
                 return redirect()->route('direktur.home');
             } else if (auth()->user()->type == 'dosen') {
-              return redirect()->route('dosen.home');
+                return redirect()->route('dosen.home');
             } else if (auth()->user()->type == 'keuangan') {
-              return redirect()->route('keuangan.home');
+                return redirect()->route('keuangan.home');
             } else if (auth()->user()->type == 'lppm') {
-              return redirect()->route('lppm.home');
+                return redirect()->route('lppm.home');
             } else if (auth()->user()->type == 'lppm') {
-              return redirect()->route('lppm.home');
+                return redirect()->route('lppm.home');
             } else if (auth()->user()->type == 'mahasiswa') {
-              return redirect()->route('mahasiswa.home');
+                return redirect()->route('mahasiswa.home');
             } else if (auth()->user()->type == 'sdm') {
-              return redirect()->route('sdm.home');
+                return redirect()->route('sdm.home');
             } else if (auth()->user()->type == 'superadmin') {
-              return redirect()->route('superadmin.home');
+                return redirect()->route('superadmin.home');
             } else if (auth()->user()->type == 'tendik') {
-              return redirect()->route('tendik.home');
+                return redirect()->route('tendik.home');
             } else if (auth()->user()->type == 'wd1') {
-              return redirect()->route('wd1.home');
+                return redirect()->route('wd1.home');
             } else if (auth()->user()->type == 'wd2') {
-              return redirect()->route('wd2.home');
+                return redirect()->route('wd2.home');
             } else if (auth()->user()->type == 'wd3') {
-              return redirect()->route('wd3.home');
+                return redirect()->route('wd3.home');
             } else {
                 return redirect()->route('home');
             }
