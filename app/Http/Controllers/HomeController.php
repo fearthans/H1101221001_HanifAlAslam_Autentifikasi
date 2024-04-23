@@ -27,54 +27,20 @@ class HomeController extends Controller
     }
     public function adminHome(): View
     {
-        return view('admin.home');
+        return view('adminuser.home');
     }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function managerHome(): View
+    {
+        return view('manager.home');
+    }
+
     public function superAdminHome(): View
     {
         return view('superadmin.home');
-    }
-    public function Dosen(): View
-    {
-        return view('dosen.home');
-    }
-    public function Mahasiswa(): View
-    {
-        return view('mahasiswa.home');
-    }
-    public function Tendik(): View
-    {
-        return view('tendik.home');
-    }
-    public function adminAkademik(): View
-    {
-        return view('akademik.home');
-    }
-    public function adminKeuangan(): View
-    {
-        return view('keuangan.home');
-    }
-    public function Direktur(): View
-    {
-        return view('direktur.home');
-    }
-    public function wakilDirektur1(): View
-    {
-        return view('wd1.home');
-    }
-    public function wakilDirektur2(): View
-    {
-        return view('wd2.home');
-    }
-    public function wakilDirektur3(): View
-    {
-        return view('wd3.home');
-    }
-    public function adminLPPM(): View
-    {
-        return view('lppm.home');
-    }
-    public function adminSDM(): View
-    {
-        return view('sdm.home');
     }
 }
