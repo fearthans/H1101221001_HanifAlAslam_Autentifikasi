@@ -47,7 +47,7 @@ class User extends Authenticatable
     protected function type(): Attribute
     {
         return new Attribute(
-            get: fn($value) => ['user', 'adminuser', 'manager','superadmin','akademik','direktur','dosen','keuangan','lppm','mahasiswa','sdm','tendik','wd1','wd2','wd3'][$value]
+            get: fn($value) => ['user', 'adminuser', 'manager','superadmin','admin','akademik','direktur','dosen','keuangan','lppm','mahasiswa','sdm','tendik','wd1','wd2','wd3'][$value]
         );
     }
 }

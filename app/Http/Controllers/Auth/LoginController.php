@@ -61,7 +61,13 @@ class LoginController extends Controller
                 )
             )
         ) {
-            if (auth()->user()->type == 'admin') {
+            if (auth()->user()->type == 'adminuser') {
+                return redirect()->route('adminuser.home');
+            } else if (auth()->user()->type == 'manager') {
+                return redirect()->route('manager.home');
+            } else if (auth()->user()->type == 'superadmin') {
+                return redirect()->route('superadmin.home');
+            } else if (auth()->user()->type == 'admin') {
                 return redirect()->route('admin.home');
             } else if (auth()->user()->type == 'akademik') {
                 return redirect()->route('akademik.home');
@@ -73,14 +79,10 @@ class LoginController extends Controller
                 return redirect()->route('keuangan.home');
             } else if (auth()->user()->type == 'lppm') {
                 return redirect()->route('lppm.home');
-            } else if (auth()->user()->type == 'lppm') {
-                return redirect()->route('lppm.home');
             } else if (auth()->user()->type == 'mahasiswa') {
                 return redirect()->route('mahasiswa.home');
             } else if (auth()->user()->type == 'sdm') {
                 return redirect()->route('sdm.home');
-            } else if (auth()->user()->type == 'superadmin') {
-                return redirect()->route('superadmin.home');
             } else if (auth()->user()->type == 'tendik') {
                 return redirect()->route('tendik.home');
             } else if (auth()->user()->type == 'wd1') {
@@ -89,6 +91,8 @@ class LoginController extends Controller
                 return redirect()->route('wd2.home');
             } else if (auth()->user()->type == 'wd3') {
                 return redirect()->route('wd3.home');
+            } else if (auth()->user()->type == 'user') {
+              return redirect()->route('home');
             } else {
                 return redirect()->route('home');
             }

@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use Illuminate\Http\RedirectResponse;
 class UserAccess
 {
     /**
@@ -20,10 +20,11 @@ class UserAccess
         if (auth()->user()->type == $userType) {
             return $next($request);
         }
-        return response()->json(['You do not have permission to access for this page.', 
-        '$usertype= ', $userType,
-        'auth()->user()->type= '.auth()->user()->type]);
-        /* return response()->view('errors.check-permission'); */
+        // response()->json(['You do not have permission to access for this page.', 
+        // '$usertype= ', $userType,
+        // 'auth()->user()->type= '.auth()->user()->type]);
+        // return response()->route('welcome', ['usertype' => $userType], '403');
+      return redirect()->route('welcome', ['usertype' => $userType]);
     }
 
 }

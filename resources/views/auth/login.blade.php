@@ -8,7 +8,8 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <!-- <form method="POST" action="{{ route('login') }}"> -->
+                      <form method="POST" action="https://678b3807-66e0-4135-bea0-18fbf87a5e0a-00-rsg4yo1c7y8q.pike.replit.dev/login">
                         @csrf
 
                         <div class="row mb-3">
